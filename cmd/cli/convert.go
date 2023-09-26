@@ -91,6 +91,8 @@ func runConvert(ctx context.Context, co *options.ConvertOptions, args []string) 
 
 	cs := convert.NewService(
 		convert.WithFormat(frmt),
+		convert.WithSelectRoot(co.SelectRoot),
+		convert.WithVirtualRootScheme(co.VirtRootScheme),
 	)
 
 	if err := cs.Convert(ctx, f, out); err != nil {
