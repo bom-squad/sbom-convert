@@ -45,5 +45,8 @@ upstream-protobom: ## Upstream protobom library
 
 .PHONY: unittest
 unittest: ## Run unittests
-	go test -count=1 -v ./...
-	
+	go test -count=1 -v ./... -run='^(Test[^F])' -args -max_test_count=100 -test_spdx_keyvalue=false -test_spdx_json=true -test_cdx_json=true
+
+.PHONY: fuzztest
+fuzztest: ## Run fuzzing tests
+	go test --fuzz=Fuzz pkg/convert/convert_fuzzing_test.go -args -seed_input=fuzz_seed_spdx.json

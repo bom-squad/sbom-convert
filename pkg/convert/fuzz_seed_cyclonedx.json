@@ -1,0 +1,94 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "serialNumber": "urn:uuid:fcd73c24-a23c-4c9e-b09c-1e8d068fde44",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2023-07-16T18:18:17-07:00",
+    "tools": [
+      {
+        "vendor": "anchore",
+        "name": "syft",
+        "version": "0.85.0"
+      }
+    ],
+    "component": {
+      "bom-ref": "cc3ab01ab0c1ab1e",
+      "type": "file",
+      "name": "/home/wei/code/repos/python/abhiTronix/vidgear"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:pypi/pyzmq@24.0.1?package-id=d345c09cbb0c1e23",
+      "type": "library",
+      "name": "pyzmq",
+      "version": "24.0.1",
+      "cpe": "cpe:2.3:a:python-pyzmq:python-pyzmq:24.0.1:*:*:*:*:*:*:*",
+      "purl": "pkg:pypi/pyzmq@24.0.1",
+      "properties": [
+        {
+          "name": "syft:package:foundBy",
+          "value": "python-index-cataloger"
+        },
+        {
+          "name": "syft:package:language",
+          "value": "python"
+        },
+        {
+          "name": "syft:package:type",
+          "value": "python"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-pyzmq:python_pyzmq:24.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_pyzmq:python-pyzmq:24.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_pyzmq:python_pyzmq:24.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python-pyzmq:24.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:python_pyzmq:24.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python-pyzmq:pyzmq:24.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python_pyzmq:pyzmq:24.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:pyzmq:python-pyzmq:24.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:pyzmq:python_pyzmq:24.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:python:pyzmq:24.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:cpe23",
+          "value": "cpe:2.3:a:pyzmq:pyzmq:24.0.1:*:*:*:*:*:*:*"
+        },
+        {
+          "name": "syft:location:0:path",
+          "value": "/setup.py"
+        }
+      ]
+    }
+  ]
+}
