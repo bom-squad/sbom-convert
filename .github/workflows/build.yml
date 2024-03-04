@@ -63,7 +63,7 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: 1.21.5
-      - uses: arduino/setup-task@v1
+      - uses: arduino/setup-task@v2
         with:
           version: 3.x
           repo-token: ${{ secrets.GH_TOKEN }}
