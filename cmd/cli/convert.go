@@ -131,6 +131,26 @@ func parseFormat(f, e string, r io.ReadSeekCloser) (*format.Format, error) {
 	return format, nil
 }
 
+// parseFormat parses the format string and returns target format
+// if format string is empty, it will try to detect the format automatically and return the detected one
+func parseFormatNoInverse(f, e string, r io.ReadSeekCloser) (*format.Format, error) {
+	if f == "" {
+		df, err := format.Detect(r)
+		if err != nil {
+			return nil, err
+		}
+
+		return df, nil
+	}
+
+	format, err := format.Parse(f, e)
+	if err != nil {
+		return nil, err
+	}
+
+	return format, nil
+}
+
 func createOutputStream(out string, frmt *format.Format) (io.WriteCloser, *string, error) {
 	log := zap.S()
 

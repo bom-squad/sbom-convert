@@ -74,6 +74,10 @@ func NewRootCmd() *cobra.Command {
 	cvtCmd := ConvertCommand()
 	rootCmd.AddCommand(cvtCmd)
 
+	// Commands
+	diffCmd := DiffCommand()
+	rootCmd.AddCommand(diffCmd)
+
 	// Manpages
 	rootCmd.AddCommand(ManCommand(rootCmd))
 	return rootCmd
